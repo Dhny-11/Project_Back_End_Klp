@@ -58,9 +58,21 @@ class Stock extends KonekOOP {
     }
 
     public function getAllProduk() {
-        $qry = mysqli_query($this->con, "SELECT i.Id_Inventaris, i.Id_Produk, p.Nama_Produk, p.Harga, i.Kuantitas_Produk, i.Tanggal_Masuk  
-            FROM inventaris as i 
-            JOIN produk as p ON i.Id_Produk = p.Id_Produk");
+        $qry = mysqli_query($this->con, 
+            "SELECT 
+                i.Id_Inventaris, 
+                i.Id_Produk, 
+                p.Nama_Produk, 
+                p.Harga, 
+                i.Kuantitas_Produk, 
+                i.Tanggal_Masuk,
+                s.Size,
+                sup.Nama_Supplier
+            FROM inventaris AS i
+            JOIN produk AS p ON i.Id_Produk = p.Id_Produk
+            LEFT JOIN size AS s ON p.Id_Size = s.Id_Size
+            LEFT JOIN supplier AS sup ON p.Id_Supplier = sup.Id_Supplier"
+        );
         $data = [];
         while ($datas = mysqli_fetch_assoc($qry)) {
             $data[] = $datas;
