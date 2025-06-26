@@ -26,11 +26,11 @@ $data = $STK->getStockById($id_inventaris);
             <input type="hidden" name="Id_Produk" value="<?= $data['Id_Produk'] ?>">
             <label style="font-size: 1.5rem;">Nama Produk: <?= $data['Nama_Produk'] ?></label><br>
             <label>Harga:</label>
-            <input type="number" name="Harga" value="<?= $data['Harga'] ?>" required><br>
+            <input type="number" class="form-control" name="Harga" value="<?= $data['Harga'] ?>" required><br>
             <label>Kuantitas:</label>
-            <input type="number" name="Kuantitas_Produk" value="<?= $data['Kuantitas_Produk'] ?>" required><br>
+            <input type="number" class="form-control" name="Kuantitas_Produk" value="<?= $data['Kuantitas_Produk'] ?>" required><br>
             <label>Tanggal Masuk:</label>
-            <input type="date" name="Tanggal_Masuk" value="<?= $data['Tanggal_Masuk'] ?>" required><br>
+            <input type="date" class="form-control" name="Tanggal_Masuk" value="<?= $data['Tanggal_Masuk'] ?>" required><br>
             <button type="submit" name="update">Update</button>
                 </form>
             <?php else: ?>
