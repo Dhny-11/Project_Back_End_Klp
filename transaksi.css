@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6f8fa;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background: #fff;
+    max-width: 480px;
+    margin: 40px auto 0 auto;
+    padding: 32px 28px 24px 28px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+h3 {
+    margin-top: 0;
+    color: #2d3a4a;
+    letter-spacing: 1px;
+}
+form label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
+}
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #f9fafb;
+    transition: border 0.2s;
+}
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    border: 1.5px solid #007bff;
+    outline: none;
+    background: #fff;
+}
+form button {
+    margin-top: 22px;
+    padding: 10px 0;
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.08em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+form button:hover {
+    background: #0056b3;
+}
+.back-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.98em;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+.messages, .errors {
+    margin-bottom: 18px;
+    padding: 10px 14px;
+    border-radius: 5px;
+    font-size: 0.98em;
+}
+.messages {
+    background: #e6f9ea;
+    color: #217a3c;
+    border: 1px solid #b6e2c7;
+}
+.errors {
+    background: #ffeaea;
+    color: #b30000;
+    border: 1px solid #f5bcbc;
+}
